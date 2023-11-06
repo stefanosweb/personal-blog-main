@@ -1,0 +1,91 @@
+baseURL: "stefanosm.com"
+languageCode: "en-us"
+title: stefanosm
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+googleAnalytics: 
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+relativeURLS: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+paginate: 10
+paginatePath: blog
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "Software Engineer, Web3 Developer, FOSS Enthusiast"
+  author: Stefanosm
+  # author: ["Me", "You"] # multiple authors
+  ShowPostNavLinks: true
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowShareButtons: true
+  ShowReadingTime:
+    true
+    # disableSpecial1stPost: true
+  displayFullLangName: true
+  comments: true
+  images: ["profile.webp"]
+
+  profileMode:
+    enabled: true
+    title: "Stefanosm" # optional default will be site title
+    subtitle: "Software Engineer"
+    imageUrl: "profile.webp" # optional
+    imageTitle: "stefanosm' profile picture" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+
+    buttons:
+      - { name: Blog, url: "/posts" }
+      - { name: About, url: "/about" }
+      - { name: Capsule Social, url: "https://capsule.social" }
+
+  socialIcons: # optional
+    - { name: "Github", url: "https://github.com/stefanosmweb" }
+    - { name: "Twitter", url: "https://twitter.com/stefanosmweb" }
+    - { name: "LinkedIn", url: "https://www.linkedin.com/in/stefanosmweb/" }
+    - { name: "Facebook", url: "https://facebook.com/stefanosm  " }
+    - { name: "Mastodon", url: "https://fosstodon.org/@stefanosmweb" }
+
+taxonomies:
+  category: categories
+  tag: tags
+
+menu:
+  main:
+    - identifier: aboutme
+      name: about me
+      url: /about
+      weight: 5
+    # - identifier: resume
+    #   name: resume
+    #   url: resume.pdf
+    #   weight: 6
+    - identifier: blog
+      name: blog
+      url: /posts
+      weight: 7
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
